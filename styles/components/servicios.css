@@ -1,0 +1,81 @@
+/* ============================================
+   SERVICIOS - Grid de servicios
+   ============================================ */
+
+.servicios {
+  padding: 4rem 0;
+}
+
+.servicios h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f8f9fa;
+  font-family: "Playfair Display", serif;
+}
+
+.servicios-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #bdc3c7;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.servicio-card {
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 192, 203, 0.1);
+  border-color: rgba(255, 192, 203, 0.3);
+  box-shadow: 0 8px 30px rgba(255, 192, 203, 0.2);
+}
+
+.servicio-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.servicio-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #f8f9fa;
+}
+
+.servicio-card p {
+  color: #bdc3c7;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .servicios h2 {
+    font-size: 2rem;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .servicio-card {
+    padding: 1.5rem;
+  }
+}

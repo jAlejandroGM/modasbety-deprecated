@@ -1,0 +1,130 @@
+/* ============================================
+   HISTORIA - Timeline y sección de historia
+   ============================================ */
+
+.historia {
+  padding: 4rem 0;
+}
+
+.historia-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.historia h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #f8f9fa;
+  font-family: "Playfair Display", serif;
+}
+
+.historia-timeline {
+  position: relative;
+}
+
+.historia-timeline::before {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ffc0cb;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.timeline-year {
+  width: 4rem;
+  height: 4rem;
+  background: #ffc0cb;
+  color: #2c3e50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-right: 2rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #f8f9fa;
+}
+
+.timeline-content p {
+  color: #bdc3c7;
+  line-height: 1.6;
+}
+
+.historia-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.historia-highlight {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  border-left: 4px solid #ffc0cb;
+  border: 1px solid rgba(255, 192, 203, 0.2);
+}
+
+.historia-highlight h3 {
+  font-size: 2rem;
+  color: #ffc0cb;
+  margin-bottom: 0.5rem;
+}
+
+.historia-highlight p {
+  color: #bdc3c7;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .historia h2 {
+    font-size: 2rem;
+  }
+
+  .historia-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .historia-timeline::before {
+    left: 1.5rem;
+  }
+
+  .timeline-year {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .historia-visual {
+    order: -1;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+
+  .historia-highlight {
+    min-width: 150px;
+    flex-shrink: 0;
+  }
+}

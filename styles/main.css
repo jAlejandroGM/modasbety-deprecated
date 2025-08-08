@@ -1,0 +1,18 @@
+/* Base: Reset y tipografía */
+@import url("./base/reset.css");
+
+/* Layout: Contenedores y estructura general */
+@import url("./layout/container.css");
+
+/* Componentes: Módulos individuales */
+@import url("./components/navbar.css");
+@import url("./components/hero.css");
+@import url("./components/servicios.css");
+@import url("./components/historia.css");
+@import url("./components/ubicacion.css");
+@import url("./components/cta.css");
+@import url("./components/footer.css");
+
+/* Utilidades: Clases auxiliares y temas */
+@import url("./utils/theme.css");
+@import url("./utils/utilities.css");

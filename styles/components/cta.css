@@ -1,0 +1,27 @@
+/* ============================================
+   CTA - Call to Action final
+   ============================================ */
+
+.cta-final {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.cta-final h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-family: "Playfair Display", serif;
+}
+
+.cta-final .boton-wsp,
+.cta-final button {
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .cta-final h2 {
+    font-size: 2rem;
+  }
+}

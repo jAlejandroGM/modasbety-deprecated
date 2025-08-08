@@ -1,0 +1,139 @@
+.hero {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.hero .contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-logo img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.hero-logo img:hover {
+  transform: scale(1.05);
+}
+
+.eslogan {
+  font-size: 3rem;
+  color: #f8f9fa;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+}
+
+.acciones {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.boton-wsp,
+.acciones button {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-wsp {
+  background: #25d366;
+  color: white;
+}
+
+.acciones button {
+  background: #ffc0cb;
+  color: #2c3e50;
+}
+
+.boton-wsp:hover,
+.acciones button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.acciones button:hover {
+  background: #ffb3ba;
+}
+
+.hero-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ffc0cb;
+  color: #f8f9fa;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 192, 203, 0.3);
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #ffb3ba;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(255, 192, 203, 0.4);
+}
+
+.social-link:hover img {
+  filter: brightness(1.1);
+}
+
+@media (max-width: 768px) {
+  .hero-logo img {
+    max-width: 80vw;
+    width: 80vw;
+  }
+
+  .eslogan {
+    font-size: 2.2rem;
+  }
+
+  .acciones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boton-wsp,
+  .acciones button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo img {
+    max-width: 85vw;
+    width: 85vw;
+  }
+
+  .eslogan {
+    font-size: 1.8rem;
+  }
+}

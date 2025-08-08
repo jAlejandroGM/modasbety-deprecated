@@ -3,10 +3,404 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="description"
+      content="Modas Bety - Taller de alta costura y confección a medida para damas en Trujillo, Perú. Elegancia, estilo y calidad en cada prenda."
+    />
+    <meta
+      name="keywords"
+      content="alta costura, confección, medida, damas, moda, Trujillo, Perú, Modas Bety"
+    />
+    <meta name="author" content="Modas Bety" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="es" />
+    <meta name="revisit-after" content="7 days" />
+    <link rel="canonical" href="https://www.modasbety.com" />
+
+    <meta
+      property="og:title"
+      content="Modas Bety - Alta costura con identidad"
+    />
+    <meta
+      property="og:description"
+      content="Taller de alta costura y confección a medida para damas. Cada prenda diseñada con elegancia y estilo único."
+    />
+    <meta property="og:type" content="website" />
+
     <title>Modas Bety</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Modas Bety",
+        "description": "Taller de alta costura y confección a medida para damas en Trujillo, Perú",
+        "url": "https://www.modasbety.com",
+        "telephone": "+51947620202",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Ejemplo 123",
+          "addressLocality": "Trujillo",
+          "addressRegion": "La Libertad",
+          "postalCode": "13001",
+          "addressCountry": "PE"
+        },
+        "openingHours": "Mo-Sa 09:00-18:00",
+        "priceRange": "$$",
+        "sameAs": [
+          "https://www.facebook.com/ModasBetyConfecciones",
+          "https://www.instagram.com/modasbety_"
+        ],
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": -8.1116,
+            "longitude": -79.0297
+          },
+          "geoRadius": 50000
+        }
+      }
+    </script>
   </head>
+
   <body>
+    <!-- Fondo animado -->
+    <canvas id="sakura-canvas"></canvas>
+
+    <!-- Navigation -->
+    <header role="banner">
+      <nav class="navbar" role="navigation" aria-label="Menú principal">
+        <div class="contenedor">
+          <ul class="nav-links">
+            <li>
+              <a href="#servicios" aria-label="Ir a la sección de servicios"
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                href="#historia"
+                aria-label="Ir a la sección de nuestra historia"
+                >Nuestra Historia</a
+              >
+            </li>
+            <li>
+              <a href="#ubicacion" aria-label="Ir a la sección de ubicación"
+                >Ubicación</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main">
+      <!-- Hero Section -->
+      <section id="inicio" class="hero">
+        <div class="contenedor">
+          <div class="hero-logo">
+            <img
+              src="assets/images/Modas Bety (sin fondo).png"
+              alt="Modas Bety - Taller de alta costura y confección a medida"
+              width="500"
+              height="250"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
+          <h1 class="eslogan">Diseños exclusivos para momentos inolvidables</h1>
+          <div class="acciones">
+            <a
+              href="https://wa.me/51947620202"
+              target="_blank"
+              class="boton-wsp"
+              rel="noopener noreferrer"
+              aria-label="Contactar por WhatsApp - Abre en una nueva ventana"
+              >Contactar por WhatsApp</a
+            >
+            <button
+              onclick="copiarTelefono()"
+              aria-label="Copiar número de teléfono al portapapeles"
+            >
+              Copiar número
+            </button>
+          </div>
+          <div class="hero-social">
+            <a
+              href="https://www.facebook.com/ModasBetyConfecciones"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Síguenos en Facebook"
+              class="social-link social-link--facebook"
+            >
+              <img
+                src="assets/icons/facebook_ligth.svg"
+                alt="Facebook"
+                width="24"
+                height="24"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/modasbety_"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Síguenos en Instagram"
+              class="social-link social-link--instagram"
+            >
+              <img
+                src="assets/icons/instagram_ligth.svg"
+                alt="Instagram"
+                width="24"
+                height="24"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section
+        id="servicios"
+        class="servicios"
+        role="region"
+        aria-labelledby="servicios-titulo"
+      >
+        <div class="contenedor">
+          <h2 id="servicios-titulo">Nuestras Especialidades</h2>
+          <p class="servicios-intro">
+            Creamos prendas únicas para cada ocasión especial de tu vida
+          </p>
+
+          <div class="servicios-grid">
+            <div class="servicio-card">
+              <div class="servicio-icon">👰</div>
+              <h3>Vestidos de Novia</h3>
+              <p>
+                Diseños únicos para el día más especial. Confección
+                personalizada con los mejores materiales.
+              </p>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-icon">🌟</div>
+              <h3>Vestidos de Fiesta</h3>
+              <p>
+                Elegancia y sofisticación para eventos especiales. Cada vestido
+                refleja tu personalidad única.
+              </p>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-icon">🌙</div>
+              <h3>Vestidos de Noche</h3>
+              <p>
+                Glamour y distinción para veladas especiales. Diseños que
+                destacan tu belleza natural.
+              </p>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-icon">👑</div>
+              <h3>Vestidos de Quinceañera</h3>
+              <p>
+                Hacemos realidad el vestido de tus sueños para celebrar tus
+                quince años con estilo.
+              </p>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-icon">👔</div>
+              <h3>Sastrería para Damas</h3>
+              <p>
+                Trajes ejecutivos y formales. Confección a medida para la mujer
+                profesional moderna.
+              </p>
+            </div>
+
+            <div class="servicio-card">
+              <div class="servicio-icon">👗</div>
+              <h3>Ropa Casual Premium</h3>
+              <p>
+                Blusas, pantalones y prendas del día a día con acabados de alta
+                costura.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our History Section -->
+      <section
+        id="historia"
+        class="historia"
+        role="region"
+        aria-labelledby="historia-titulo"
+      >
+        <div class="contenedor">
+          <div class="historia-content">
+            <div class="historia-text">
+              <h2 id="historia-titulo">Nuestra Historia</h2>
+              <div class="historia-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-year">2010</div>
+                  <div class="timeline-content">
+                    <h3>Los Inicios</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud
+                      exercitation.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-year">2015</div>
+                  <div class="timeline-content">
+                    <h3>Crecimiento y Especialización</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-year">2020</div>
+                  <div class="timeline-content">
+                    <h3>Expansión Digital</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Excepteur sint occaecat cupidatat non proident, sunt in
+                      culpa qui officia deserunt mollit anim.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-year">2025</div>
+                  <div class="timeline-content">
+                    <h3>Presente - Alta Costura con Identidad</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="historia-visual">
+              <div class="historia-highlight">
+                <h3>15+ años</h3>
+                <p>de experiencia en alta costura</p>
+              </div>
+              <div class="historia-highlight">
+                <h3>500+</h3>
+                <p>clientas satisfechas</p>
+              </div>
+              <div class="historia-highlight">
+                <h3>100%</h3>
+                <p>confección a medida</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location Section -->
+      <section
+        id="ubicacion"
+        class="ubicacion"
+        role="region"
+        aria-labelledby="ubicacion-titulo"
+      >
+        <div class="contenedor">
+          <h2 id="ubicacion-titulo">Encuéntranos</h2>
+          <address>
+            <p>Av. Ejemplo 123, Lima, Perú</p>
+          </address>
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=..."
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+              title="Ubicación de Modas Bety en Google Maps"
+              aria-label="Mapa interactivo mostrando la ubicación de Modas Bety"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>
+            © <span id="current-year">2025</span> Modas Bety - Diseños
+            exclusivos para momentos inolvidables
+          </p>
+          <p class="dev-credits">
+            Desarrollado con ☕ por
+            <a
+              href="https://github.com/jAlejandroGM"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="dev-link"
+              aria-label="Ver perfil de GitHub del desarrollador"
+              >José Alejandro G.</a
+            >
+          </p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.facebook.com/ModasBetyConfecciones"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <img
+              src="assets/icons/facebook_ligth.svg"
+              alt="Facebook"
+              width="20"
+              height="20"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/modasbety_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <img
+              src="assets/icons/instagram_ligth.svg"
+              alt="Instagram"
+              width="20"
+              height="20"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/sakura-animation.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

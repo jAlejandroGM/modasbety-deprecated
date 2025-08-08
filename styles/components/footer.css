@@ -1,0 +1,76 @@
+/* ============================================
+   FOOTER - Pie de página
+   ============================================ */
+
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 1.5rem 1rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-content p {
+  font-size: 0.9rem;
+  color: #bdc3c7;
+}
+
+.dev-credits {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+.dev-link {
+  color: #ffc0cb;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.dev-link:hover {
+  color: #ffb3ba;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social a img {
+  width: 20px;
+  height: 20px;
+  transition: all 0.2s ease;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.footer-social a:hover img {
+  filter: brightness(1.1);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
