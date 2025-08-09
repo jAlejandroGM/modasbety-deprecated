@@ -149,8 +149,37 @@
             <button
               onclick="copiarTelefono()"
               aria-label="Copiar número de teléfono al portapapeles"
+              id="copy-button"
             >
-              Copiar número
+              <span class="button-text">Copiar número</span>
+              <div class="button-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  class="copy-icon"
+                  id="copy-icon"
+                >
+                  <path
+                    d="M16 1H4C2.9 1 2 1.9 2 3v14h2V3h12V1zm3 4H8C6.9 5 6 5.9 6 7v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  class="check-icon"
+                  id="check-icon"
+                  style="display: none"
+                >
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                    fill="#22c55e"
+                  />
+                </svg>
+              </div>
             </button>
           </div>
           <div class="hero-social">
@@ -431,6 +460,7 @@
     </footer>
 
     <script src="scripts/sakura-animation.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/components/year-updater.js"></script>
+    <script src="scripts/components/copy-button.js"></script>
   </body>
 </html>

@@ -2,6 +2,8 @@
   --sakura-primary: #ffc0cb;
   --sakura-hover: #ffb3ba;
   --dark-text: #2c3e50;
+  --whatsapp-green: #22c55e;
+  --off-white: #f8f9fa;
 }
 
 body {
@@ -16,7 +18,7 @@ body {
       transparent 50%
     ),
     linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
-  color: #f8f9fa;
+  color: var(--off-white);
   transition: all 0.3s ease;
 }
 
