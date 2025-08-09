@@ -31,7 +31,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: #ffc0cb;
+  background: var(--sakura-primary);
 }
 
 .timeline-item {
@@ -43,8 +43,8 @@
 .timeline-year {
   width: 4rem;
   height: 4rem;
-  background: #ffc0cb;
-  color: #2c3e50;
+  background: var(--sakura-primary);
+  color: var(--dark-text);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -81,12 +81,14 @@
   border-radius: 12px;
   text-align: center;
   border-left: 4px solid #ffc0cb;
-  border: 1px solid rgba(255, 192, 203, 0.2);
+  border-top: 1px solid var(--sakura-primary);
+  border-right: 1px solid var(--sakura-primary);
+  border-bottom: 1px solid var(--sakura-primary);
 }
 
 .historia-highlight h3 {
   font-size: 2rem;
-  color: #ffc0cb;
+  color: var(--sakura-primary);
   margin-bottom: 0.5rem;
 }
 

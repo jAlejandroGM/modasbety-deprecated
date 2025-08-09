@@ -1,3 +1,9 @@
+:root {
+  --sakura-primary: #ffc0cb;
+  --sakura-hover: #ffb3ba;
+  --dark-text: #2c3e50;
+}
+
 body {
   background: radial-gradient(
       circle at 20% 50%,
@@ -24,22 +30,4 @@ body {
   );
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.btn {
-  background: #ffc0cb;
-  color: #2c3e50;
-}
-
-.btn:hover {
-  background: #ffb3ba;
-}
-
-.historia-timeline::before {
-  background: #ffc0cb;
-}
-
-.timeline-year {
-  background: #ffc0cb;
-  color: #2c3e50;
 }
