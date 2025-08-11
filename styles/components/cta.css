@@ -1,73 +1,3 @@
-/* ===== CTA COMPONENTS ===== */
-
-/* CTA en servicios */
-.servicios-cta {
-  margin-top: 4rem;
-  text-align: center;
-  padding: 2rem;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 192, 203, 0.08),
-    rgba(255, 182, 193, 0.12)
-  );
-  border-radius: 16px;
-  border: 1px solid rgba(255, 192, 203, 0.2);
-}
-
-.servicios-cta .cta-text {
-  font-size: 1.2rem;
-  color: var(--sakura-primary);
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-}
-
-.servicios-cta .cta-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background: var(--whatsapp-green);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.servicios-cta .cta-button:hover {
-  background: #16a085;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-}
-
-/* CTA en ubicación */
-.ubicacion-cta {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.ubicacion-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  background: transparent;
-  color: var(--sakura-primary);
-  text-decoration: none;
-  border: 1px solid var(--sakura-primary);
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.ubicacion-button:hover {
-  background: var(--sakura-primary);
-  color: white;
-  transform: translateY(-1px);
-}
-
-/* Sección CTA principal */
 .cta-section {
   background: linear-gradient(135deg, var(--sakura-primary) 0%, #e91e63 100%);
   padding: 5rem 0;
@@ -140,15 +70,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .servicios-cta {
-    margin-top: 3rem;
-    padding: 1.5rem;
-  }
-
-  .servicios-cta .cta-text {
-    font-size: 1.1rem;
-  }
-
   .cta-content h2 {
     font-size: 2rem;
   }
