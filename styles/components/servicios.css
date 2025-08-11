@@ -1,11 +1,13 @@
 .servicios {
-  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 
 .servicios h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
   color: var(--off-white);
   font-family: "Playfair Display", serif;
 }
@@ -14,50 +16,44 @@
   text-align: center;
   font-size: 1.2rem;
   color: #bdc3c7;
-  margin-bottom: 3rem;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.carousel-wrapper {
-  overflow: hidden;
-  width: 100%;
-  padding: 2rem 0;
-
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: calc(-50vw + var(--scrollbar-compensacion, 6px)); /* ajusta px */
-  margin-right: calc(-50vw + var(--scrollbar-compensacion, 6px));
+  margin: auto;
 }
 
 .carousel {
-  width: 100%;
+  overflow: hidden;
+  width: 98vw;
+  padding: 2rem 0;
+  margin: auto;
 }
 
 .servicios-grid {
   display: flex;
-  flex-wrap: nowrap;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: calc((280px + 2rem) * 12);
 }
 
 .servicio-card {
   flex: 0 0 auto;
   width: 280px;
-  max-width: 280px;
-  margin-right: 2rem;
   padding: 2rem;
+  margin-right: 2rem;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: all 0.3s ease;
 }
 
-.servicio-card:last-child {
-  margin-right: 0;
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc((-280px - 2rem) * 6));
+    transform: translateX(calc((-280px - 2rem) * 6));
+  }
 }
 
 .servicio-card:hover {
@@ -84,6 +80,7 @@
 }
 
 .servicios-cta {
+  width: 100%;
   text-align: center;
   padding: 2rem;
   background: linear-gradient(
@@ -126,14 +123,6 @@
     font-size: 2rem;
   }
 
-  .servicios-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .servicio-card {
-    padding: 1.5rem;
-  }
   .servicios-cta {
     margin-top: 3rem;
     padding: 1.5rem;

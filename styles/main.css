@@ -2,7 +2,7 @@
 @import url("./base/reset.css");
 
 /* Layout: Contenedores y estructura general */
-@import url("./layout/container.css");
+@import url("./layout/layout.css");
 
 /* Componentes: Módulos individuales */
 @import url("./components/navbar.css");

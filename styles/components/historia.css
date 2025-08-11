@@ -1,11 +1,3 @@
-/* ============================================
-   HISTORIA - Timeline y sección de historia
-   ============================================ */
-
-.historia {
-  padding: 4rem 0;
-}
-
 .historia-content {
   display: grid;
   grid-template-columns: 2fr 1fr;

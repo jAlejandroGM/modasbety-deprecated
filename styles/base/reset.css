@@ -10,6 +10,7 @@ body {
   grid-template-rows: auto 1fr auto;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   line-height: 1.5;
+  gap: 6rem;
 }
 
 ul {
