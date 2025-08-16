@@ -11,7 +11,7 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 12rem;
 }
 
 .contenedor {
