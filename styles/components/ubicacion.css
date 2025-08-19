@@ -63,21 +63,23 @@
 .ubi-info-list > li {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .li-title {
-  font-size: 1.1rem;
-  font-style: italic;
+  font-size: 1.2rem;
   color: var(--sakura-primary);
 }
 
-.ubi-dir-btn {
+.ubi-dir-btn,
+.ubi-tlfn-btn {
   display: inline-flex;
   width: fit-content;
   align-items: center;
   justify-content: center;
   gap: 5px;
+  background-color: transparent;
+  color: var(--off-white);
   border: 1.5px solid var(--sakura-primary);
   border-radius: 50%;
   padding: 7px;
@@ -85,27 +87,36 @@
   cursor: pointer;
 }
 
-.ubi-dir-btn:hover {
+.ubi-dir-btn:hover,
+.ubi-tlfn-btn:hover {
   box-shadow: 0 2px 12px rgba(255, 192, 203, 0.22);
+  transform: translateY(-1px);
 }
 
-.ubi-dir-btn svg {
-  height: 24px;
-  width: 24px;
+.ubi-dir-btn svg,
+.ubi-tlfn-btn svg {
+  height: 20px;
+  width: 20px;
 }
 
 .ubi-tlfn-btn {
-  background: transparent;
-  border: 1px solid var(--sakura-primary);
-  color: var(--sakura-primary);
-  border-radius: 8px;
-  padding: 4px 10px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  position: relative;
 }
 
-.ubi-tlfn-btn:hover {
+.ubi-tlfn-btn.copied::after {
+  content: "¡Copiado!";
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--sakura-primary);
-  color: #fff;
+  color: var(--dark-text);
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 8px rgba(255, 192, 203, 0.18);
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 10;
 }

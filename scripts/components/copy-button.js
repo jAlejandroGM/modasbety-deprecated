@@ -75,3 +75,20 @@ function restaurarBotonCopiar() {
     isAnimating = false;
   }, 400);
 }
+
+// Solo muestra el mensaje "¡Copiado!" con CSS en el botón de ubicación
+function copiarTelefono2(btn) {
+  btn.classList.add("copied");
+  const telefono = "+51 947 620 202";
+  navigator.clipboard.writeText(telefono).catch(() => {
+    const textArea = document.createElement("textarea");
+    textArea.value = telefono;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+  });
+  setTimeout(() => {
+    btn.classList.remove("copied");
+  }, 2000);
+}
