@@ -398,7 +398,7 @@
         <div class="contenedor">
           <h2 id="ubicacion-titulo">Encuéntranos</h2>
           <div class="ubicacion-body">
-            <div class="mapa">
+            <section class="ubi-mapa" aria-label="Mapa de ubicación">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.756513698254!2d-79.02167642241776!3d-8.12625418134591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad17790af131f7%3A0xc77d68ccfcf3cee2!2sModas%20Bety!5e0!3m2!1sen!2spe!4v1755303610052!5m2!1sen!2spe"
                 width="100%"
@@ -410,60 +410,87 @@
                 title="Ubicación de Modas Bety en Google Maps"
                 aria-label="Mapa interactivo mostrando la ubicación de Modas Bety"
               ></iframe>
-            </div>
-            <address class="ubicacion-info">
-              <p class="ubicacion-direccion item">
-                <span class="item-title">Dirección:</span>
-                <span
-                  >Calle José Dolores López 315, Urb. Santa María 5ta Etapa,
-                  Trujillo</span
-                >
-                <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=-8.12625418134591,-79.02167642241776"
-                  target="_blank"
-                  class="ubicacion-button"
-                  rel="noopener noreferrer"
-                  aria-label="Cómo llegar a Modas Bety"
-                >
-                  Cómo llegar
-                </a>
-              </p>
-              <div class="ubicacion-contacto item">
-                <span class="item-title">Teléfono:</span>
-                <span class="ubicacion-telefono"
-                  >+51 947 620 202
-                  <button
-                    class="ubicacion-copy-btn"
-                    onclick="copiarTelefono()"
-                    aria-label="Copiar número de teléfono"
-                  >
-                    Copiar
-                  </button></span
-                >
-                <a
-                  href="https://wa.me/51947620202?text=¡Hola!%20Me%20gustaría%20agendar%20una%20cita%20para%20visitar%20su%20taller.%20¿Cuál%20sería%20la%20mejor%20fecha?"
-                  target="_blank"
-                  class="ubicacion-button"
-                  rel="noopener noreferrer"
-                  aria-label="Agendar cita por WhatsApp"
-                >
-                  Agendar cita
-                </a>
-              </div>
-              <p class="ubicacion-horario item">
-                <span class="item-title">Horario de atención:</span>
-                <span>Lunes a Sábado de: </span>
-                <span>9:00 am – 1:00 pm</span>
-                <span>3:00 pm – 8:00 pm</span>
-              </p>
-              <p class="ubicacion-referencia item">
-                <span class="item-title">Referencia:</span>
-                <span
-                  >A la altura de la Empresa de Transporte America Express y el
-                  Patio de Llaves de Hidrandina</span
-                >
-              </p>
-            </address>
+            </section>
+            <section class="ubi-info" aria-label="Información de contacto">
+              <address>
+                <ul class="ubi-info-list">
+                  <li class="ubi-dir">
+                    <span class="li-title">Dirección:</span>
+                    <span
+                      >Calle José Dolores López 315, Urb. Santa María 5ta Etapa,
+                      Trujillo</span
+                    >
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=-8.12625418134591,-79.02167642241776"
+                      target="_blank"
+                      class="ubi-dir-btn"
+                      rel="noopener noreferrer"
+                      aria-label="Cómo llegar a Modas Bety"
+                    >
+                      Cómo llegar
+                      <svg
+                        fill="#ffc0cb"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="#ffc0cb"
+                        stroke-width="0.00024000000000000003"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.9439774,2.73116957 L14.0855382,2.86385819 L21.1361418,9.91446183 C22.2879527,11.0662728 22.2879527,12.9337272 21.1361418,14.0855382 L14.0855382,21.1361418 C12.9337272,22.2879527 11.0662728,22.2879527 9.91446183,21.1361418 L2.86385819,14.0855382 C1.71204727,12.9337272 1.71204727,11.0662728 2.86385819,9.91446183 L9.91446183,2.86385819 C11.0202003,1.75811971 12.7854759,1.71389017 13.9439774,2.73116957 Z M11.3286754,4.27807176 L4.27807176,11.3286754 C3.90730941,11.6994377 3.90730941,12.3005623 4.27807176,12.6713246 L11.3286754,19.7219282 C11.6994377,20.0926906 12.3005623,20.0926906 12.6713246,19.7219282 L19.7219282,12.6713246 C20.0926906,12.3005623 20.0926906,11.6994377 19.7219282,11.3286754 L12.6864633,4.29321048 L12.6243321,4.23401232 C12.2514817,3.9066126 11.6827715,3.92397563 11.3286754,4.27807176 Z M13.6128994,9.20970461 L13.7071068,9.29289322 L15.7071068,11.2928932 C16.0675907,11.6533772 16.0953203,12.2206082 15.7902954,12.6128994 L15.7071068,12.7071068 L13.7071068,14.7071068 C13.3165825,15.0976311 12.6834175,15.0976311 12.2928932,14.7071068 C11.9324093,14.3466228 11.9046797,13.7793918 12.2097046,13.3871006 L12.2928932,13.2928932 L12.584,13 L10,13 L10,14 C10,14.5522847 9.55228475,15 9,15 C8.48716416,15 8.06449284,14.6139598 8.00672773,14.1166211 L8,14 L8,12 C8,11.4871642 8.38604019,11.0644928 8.88337887,11.0067277 L9,11 L12.585,11 L12.2928932,10.7071068 C11.9324093,10.3466228 11.9046797,9.77939176 12.2097046,9.38710056 L12.2928932,9.29289322 C12.6533772,8.93240926 13.2206082,8.90467972 13.6128994,9.20970461 Z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="ubi-hor">
+                    <span class="li-title">Horario de atención:</span>
+                    <span>Lunes a Sábado de:</span>
+                    <ul>
+                      <li>9:00 am – 1:00 pm</li>
+                      <li>3:00 pm – 8:00 pm</li>
+                    </ul>
+                  </li>
+                  <li class="ubi-ref">
+                    <span class="li-title">Referencia:</span>
+                    <span
+                      >A la altura de la Empresa de Transporte America Express y
+                      el Patio de Llaves de Hidrandina</span
+                    >
+                  </li>
+                  <li class="ubi-cont">
+                    <span class="li-title">Teléfono:</span>
+                    <span class="ubi-tlfn">
+                      +51 947 620 202
+                      <button
+                        class="ubi-tlfn-btn"
+                        onclick="copiarTelefono()"
+                        aria-label="Copiar número de teléfono"
+                      >
+                        Copiar
+                      </button>
+                    </span>
+                    <a
+                      href="https://wa.me/51947620202?text=¡Hola!%20Me%20gustaría%20agendar%20una%20cita%20para%20visitar%20su%20taller.%20¿Cuál%20sería%20la%20mejor%20fecha?"
+                      target="_blank"
+                      class="ubi-wsp-btn"
+                      rel="noopener noreferrer"
+                      aria-label="Agendar cita por WhatsApp"
+                    >
+                      Agendar cita
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </section>
           </div>
         </div>
       </section>

@@ -14,55 +14,88 @@
 
 .ubicacion-body {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 4rem 3rem;
   width: 100%;
+  padding: 3rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 192, 203, 0.08),
+    rgba(255, 182, 193, 0.12)
+  );
+  border-radius: 24px;
+  border: 1px solid rgba(255, 192, 203, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
-.mapa {
-  width: 60%;
+.ubi-mapa {
+  width: 100%;
+  border: 3px solid var(--sakura-primary);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s;
 }
 
-.mapa iframe {
+.ubi-mapa iframe {
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
   height: 500px;
   border: none;
   display: block;
 }
 
-.ubicacion-cta {
-  text-align: center;
-  margin-top: 2rem;
+.ubi-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ubicacion-info {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 3rem;
-  gap: 1rem;
+.ubi-info-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 5rem;
   font-style: normal;
   color: var(--off-white);
 }
 
-.item {
+.ubi-info-list > li {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
-.item-title {
+.li-title {
+  font-size: 1.1rem;
   font-style: italic;
   color: var(--sakura-primary);
 }
 
-.ubicacion-buttons {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+.ubi-dir-btn {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: var(--off-white);
+  border: 1.5px solid var(--sakura-primary);
+  border-radius: 12px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.ubicacion-copy-btn {
+.ubi-dir-btn:hover {
+  box-shadow: 0 2px 12px rgba(255, 192, 203, 0.22);
+}
+
+.ubi-dir-btn svg {
+  height: 22px;
+  width: 22px;
+}
+
+.ubi-tlfn-btn {
   background: transparent;
   border: 1px solid var(--sakura-primary);
   color: var(--sakura-primary);
@@ -73,43 +106,7 @@
   transition: background 0.2s, color 0.2s;
 }
 
-.ubicacion-copy-btn:hover {
+.ubi-tlfn-btn:hover {
   background: var(--sakura-primary);
   color: #fff;
-}
-
-.ubicacion-direccion i,
-.ubicacion-horario i,
-.ubicacion-referencia i,
-.ubicacion-contacto i {
-  color: var(--sakura-primary);
-  font-style: italic;
-  letter-spacing: 1.5px;
-}
-
-.ubicacion-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  background: transparent;
-  color: var(--sakura-primary);
-  text-decoration: none;
-  border: 1px solid var(--sakura-primary);
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.ubicacion-button:hover {
-  background: var(--sakura-primary);
-  color: white;
-  transform: translateY(-1px);
-}
-
-@media (max-width: 768px) {
-  .ubicacion h2 {
-    font-size: 2rem;
-  }
 }
