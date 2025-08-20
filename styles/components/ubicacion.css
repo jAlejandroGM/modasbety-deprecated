@@ -15,7 +15,7 @@
 .ubicacion-body {
   display: flex;
   flex-direction: column;
-  gap: 4rem 3rem;
+  gap: 2rem;
   width: 100%;
   padding: 3rem;
   background: linear-gradient(
@@ -32,7 +32,7 @@
   width: 100%;
   border: 3px solid var(--sakura-primary);
   border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px 0 var(--sakura-hover);
   overflow: hidden;
   transition: box-shadow 0.3s;
 }
@@ -55,9 +55,9 @@
 .ubi-info-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem 5rem;
   font-style: normal;
   color: var(--off-white);
+  gap: 7rem;
 }
 
 .ubi-info-list > li {
@@ -81,8 +81,8 @@
   background-color: transparent;
   color: var(--off-white);
   border: 1.5px solid var(--sakura-primary);
-  border-radius: 50%;
-  padding: 7px;
+  border-radius: 100%;
+  padding: 5px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -119,4 +119,77 @@
   pointer-events: none;
   transition: opacity 0.3s;
   z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .ubicacion-body {
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: 16px;
+  }
+  .ubi-mapa {
+    border-radius: 12px;
+  }
+  .ubi-mapa iframe {
+    height: 260px;
+    max-width: 100vw;
+  }
+  .ubi-info-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .ubi-info-list > li {
+    gap: 0.5rem;
+  }
+  .ubi-dir-btn,
+  .ubi-tlfn-btn {
+    padding: 4px;
+    font-size: 0.95rem;
+  }
+  .ubi-dir-btn svg,
+  .ubi-tlfn-btn svg {
+    height: 18px;
+    width: 18px;
+  }
+  .ubi-tlfn-btn.copied::after {
+    font-size: 0.75rem;
+    top: -28px;
+    padding: 3px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ubicacion-body {
+    border-radius: 8px;
+  }
+  .ubi-mapa {
+    border-radius: 8px;
+  }
+  .ubi-mapa iframe {
+    height: 200px;
+  }
+  .ubi-info-list {
+    gap: 0.5rem;
+  }
+  .ubi-info-list > li {
+    font-size: 0.8rem;
+  }
+  .li-title {
+    font-size: 1rem;
+  }
+  .ubi-dir-btn,
+  .ubi-tlfn-btn {
+    font-size: 0.9rem;
+    padding: 2px;
+  }
+  .ubi-dir-btn svg,
+  .ubi-tlfn-btn svg {
+    height: 16px;
+    width: 16px;
+  }
+  .ubi-tlfn-btn.copied::after {
+    font-size: 0.7rem;
+    top: -22px;
+    padding: 2px 8px;
+  }
 }
