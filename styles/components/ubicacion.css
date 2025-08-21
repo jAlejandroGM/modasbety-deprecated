@@ -122,6 +122,9 @@
 }
 
 @media (max-width: 768px) {
+  .ubicacion h2 {
+    font-size: 2.2rem;
+  }
   .ubicacion-body {
     padding: 1.5rem;
     gap: 1rem;
@@ -159,6 +162,9 @@
 }
 
 @media (max-width: 480px) {
+  .ubicacion h2 {
+    font-size: 1.7rem;
+  }
   .ubicacion-body {
     border-radius: 8px;
   }

@@ -48,3 +48,35 @@ footer p {
   opacity: 1;
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  footer .contenedor {
+    gap: 0.7rem;
+  }
+  footer p {
+    font-size: 0.8rem;
+  }
+  .footer-social img {
+    width: 28px;
+    height: 28px;
+  }
+  .dev-credits {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .contenedor {
+    gap: 0.5rem;
+  }
+  footer p {
+    font-size: 0.7rem;
+  }
+  .footer-social img {
+    width: 22px;
+    height: 22px;
+  }
+  .dev-credits {
+    font-size: 0.6rem;
+  }
+}
